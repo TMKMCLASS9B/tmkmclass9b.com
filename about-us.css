@@ -1,0 +1,213 @@
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #222;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 10px;
+    color: #ffeb3b; /* Bright yellow for the logo name */
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav {
+    position: relative;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+}
+
+.hamburger span {
+    display: block;
+    height: 4px;
+    background-color: #f0f0f0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.nav-links li {
+    margin: 10px 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff6f61;
+}
+
+/* About Us section */
+main {
+    padding: 50px 20px;
+}
+
+.about-us-section {
+    text-align: center;
+}
+
+.about-us-section h1 {
+    font-size: 2.5rem;
+    color: #ff5722; /* Vibrant orange for the main heading */
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px #ff5722, 0 0 15px #ff5722; /* Glowing effect */
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.about-text {
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+.about-text h2 {
+    font-size: 1.8rem;
+    color: #ffeb3b; /* Bright yellow for section titles */
+    margin-bottom: 10px;
+    text-shadow: 0 0 6px #ffeb3b, 0 0 12px #ffeb3b; /* Glowing effect */
+}
+
+.about-text p {
+    font-size: 1rem;
+    color: #ccc; /* Light grey for text */
+    margin-bottom: 20px;
+}
+
+footer {
+    padding: 10px 20px;
+    background-color: #333;
+    text-align: center;
+    color: #f0f0f0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+    }
+}
+
+.button-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff);
+    background-size: 600% 100%;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    animation: gradientMove 3s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333; /* Dark background for contrast */
+    color: #fff; /* White text color */
+    text-align: center; /* Center-align the text */
+    padding: 10px 0; /* Add some padding */
+    width: 100%; /* Full width */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    font-size: 14px; /* Adjust font size */
+    z-index: 1000; /* Ensure it stays above other content */
+    flex-shrink: 0; /* Ensure footer doesn't shrink */
+    position: relative; /* Ensure footer is positioned correctly */
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Announcements</title>
+    <link rel="stylesheet" href="special-announcements.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="class-logo.png" alt="Logo" class="logo">
+            <div class="logo-name">TMKM Class 9(B)</div>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="class-routine.html">Class Routine</a></li>
+                <li><a href="all-subjects.html">All Subjects</a></li>
+                <li><a href="special-announcements.html">Special Announcements</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="announcement-section">
+        <h1>Special Announcements</h1>
+        <div class="announcement-container">
+            <div class="announcement">
+                <h2>Announcement Title 1</h2>
+                <p>ছাত্রদের কোটা আন্দোলনের মাধ্যমে বাংলাদেশ স্বাধীন হয়েছে। বর্তমানে আমাদের মাদ্রাসা খুলে দেওয়া হয়েছে এবং মাদ্রাসায় ক্লাস হচ্ছে। সকাল সাড়ে সাতটা থেকে ক্লাস শুরু হয়। আর শোনা যাচ্ছে যে আমাদের পরীক্ষা অর্থাৎ আরবি পরীক্ষাগুলো মাদ্রাসা কর্তৃপক্ষ পক্ষ থেকে নেওয়া হবে।</p>
+            </div>
+            <div class="announcement">
+                <h2>Announcement Title 2</h2>
+                <a href="https://www.facebook.com/groups/523607966997300/" class="glow-link">Click Here to join</a>
+                <p>আমাদের অফিসিয়াল ফেসবুক গ্রুপ (ছাত্রদের জন্য) অনুগ্রহ করে আমাদের প্রশ্নের উত্তর দিয়ে যোগ দিন। ধন্যবাদ!🥰</p>
+            </div>
+            <div class="announcement">
+                <h2>Announcement Title 3</h2>
+                <a href="https://www.facebook.com/profile.php?id=61563974693390" class="glow-link">Click Here to Visit</a>
+                <p>আমাদের ক্লাস সম্পর্কে আরও জানতে অনুগ্রহ করে আমাদের ফেসবুক পেজ দেখুন 🥰</p>
+            </div>
+            <a href="about-us.html" class="cta-button">About Us</a>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 TMKM Class 9(B). All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
