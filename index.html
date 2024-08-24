@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="class-logo.png" alt="Logo" class="logo">
+            <div class="logo-name">TMKM Class 9(B)</div>
+        </div>
+    </header>
+
+    <main>
+        <section class="login-section">
+            <h1>Login</h1>
+            <div class="login-form-container">
+                <form id="loginForm" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="b277c1ba-1330-4163-9241-59f1a35021ca">
+                    <div class="form-group">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="last-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="roll">Roll</label>
+                        <input type="text" id="roll" name="roll" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="class">Class</label>
+                        <input type="text" id="class" name="class" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="section">Section</label>
+                        <input type="text" id="section" name="section" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile-number">Mobile Number</label>
+                        <input type="text" id="mobile-number" name="mobile-number" required>
+                    </div>
+                    <div class="button-container">
+                        <button type="submit" class="cta-button">Login</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TMKM Class 9(B). All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            const form = event.target;
+            const formData = new FormData(form);
+
+            fetch(form.action, {
+                method: form.method,
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    window.location.href = 'home.html'; // Redirect to index.html on success
+                } else {
+                    alert('Failed to login. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again.');
+            });
+        });
+    </script>
+</body>
+</html>

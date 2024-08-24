@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="about-us.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="class-logo.png" alt="Logo" class="logo">
+            <div class="logo-name">TMKM Class 9(B)</div>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="class-routine.html">Class Routine</a></li>
+                <li><a href="all-subjects.html">All Subjects</a></li>
+                <li><a href="special-announcements.html">Special Announcements</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-us-section">
+            <h1>About Us</h1>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="about-us-image.jpg" alt="About Us">
+                </div>
+                <div class="about-text">
+                    <h2>Our Mission</h2>
+                    <p>আমাদের লক্ষ্য হল আপনাকে আপনার প্রাপ্য সঠিক তথ্য দেওয়া। এই ওয়েবসাইটে আমরা আমাদের ক্লাস সম্পর্কে সব ধরনের তথ্য যোগ করার চেষ্টা করেছি। কিন্তু যদি আপনি কিছু অনুপস্থিত বা কোন সমস্যা খুঁজে পান তাহলে আমাদের সাথে যোগাযোগ করুন। সব শেষে আমরাও মানুষ।</p>
+                    <h2>Our History</h2>
+                    <p>একদা একটি ছেলে কোডিং জানত কিন্তু কোথায় দেখাতে হবে তা জানত না। তারপর একদিন দেখা গেল তিনি ওয়েবসাইট তৈরি করতে পারেন কিন্তু কী ওয়েবসাইট? তিনি বিভিন্ন ধরনের ওয়েবসাইট তৈরি করেছেন কিন্তু সেগুলোর কোনোটিই কার্যকর নয়। এর পরে তিনি ভেবেছিলেন যে তিনি তার ক্লাসের জন্য, তার সহপাঠীদের জন্য একটি ওয়েবসাইট তৈরি করতে পারেন যাতে তারা সহজেই সত্য তথ্য পেতে পারে। এইভাবে তিনি এই ওয়েবসাইট তৈরি করেন। তিনি কামনা করেন যে আপনি এটি পছন্দ করবেন এবং এটি দরকারী পাবেন।</p>
+                    <p>ধন্যবাদ</p>
+                    <h2>Our Team</h2>
+                    <p>প্রকৃতপক্ষে কোন দল ছিল না শুধুমাত্র আমিই এই ওয়েবপৃষ্ঠাটি তৈরি করেছি কিন্তু আমি একটি দল পেলে সত্যিই খুশি হব। কেউ থাকলে আমার সাথে যোগাযোগ করতে পারেন।</p>
+                </div>
+            </div>
+        </section>
+    </main>
+                <a href="contact-us.html" class="cta-button">Contact Us Please</a>
+    <footer>
+        <p>&copy; 2024 TMKM Class 9(B). All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

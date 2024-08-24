@@ -1,0 +1,240 @@
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #222;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 10px;
+    color: #ffeb3b; /* Bright yellow for the logo name */
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav {
+    position: relative;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+}
+
+.hamburger span {
+    display: block;
+    height: 4px;
+    background-color: #f0f0f0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.nav-links li {
+    margin: 10px 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff6f61;
+}
+
+/* Announcement section */
+.announcement-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.announcement-section h1 {
+    font-size: 2.5rem;
+    color: #ff5722; /* Vibrant orange for the main heading */
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px #ff5722, 0 0 15px #ff5722; /* Glowing effect */
+}
+
+.announcement-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.announcement {
+    background-color: #444;
+    padding: 20px;
+    margin: 20px 0;
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.announcement:hover {
+    transform: perspective(1000px) rotateX(0) rotateY(0);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.announcement h2 {
+    font-size: 1.8rem;
+    color: #ffeb3b; /* Bright yellow for announcement titles */
+    margin-bottom: 10px;
+    text-shadow: 0 0 6px #ffeb3b, 0 0 12px #ffeb3b; /* Glowing effect */
+}
+
+.announcement p {
+    font-size: 1rem;
+    color: #ccc; /* Light grey for announcement text */
+}
+
+/* Glow Link */
+.glow-link {
+    color: #04CEFF;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 0, 255, 0.7);
+}
+
+.glow-link:hover {
+    text-shadow: 0 0 20px rgba(0, 0, 255, 1);
+}
+
+/* 3D RGB Button */
+.cta-button {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 0;
+}
+
+.cta-button:hover {
+    transform: perspective(1000px) rotateX(0) rotateY(0);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.cta-button span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+    }
+
+    .announcement {
+        width: 90%;
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333; /* Dark background for contrast */
+    color: #fff; /* White text color */
+    text-align: center; /* Center-align the text */
+    padding: 10px 0; /* Add some padding */
+    width: 100%; /* Full width */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    font-size: 14px; /* Adjust font size */
+    z-index: 1000; /* Ensure it stays above other content */
+    flex-shrink: 0; /* Ensure footer doesn't shrink */
+    position: relative; /* Ensure footer is positioned correctly */
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+}

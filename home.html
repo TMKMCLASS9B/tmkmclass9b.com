@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMKM Class 9(B)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay muted loop id="bg-video">
+            <source src="hbackground.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="content">
+            <header>
+                <div class="logo-container">
+                    <div class="logo-name">TMKM Class 9(B)</div>
+                    <div class="logo">
+                        <img src="class-logo.jpg" alt="Class Logo">
+                    </div>
+                </div>
+                <nav>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="class-routine.html">Class Routine</a></li>
+                        <li><a href="all-subjects.html">All Subjects</a></li>
+                        <li><a href="special-announcements.html">Special Announcements</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <h1 class="animated-title">Welcome to Our Class</h1>
+                <p class="animated-subtitle">Your journey starts here!</p>
+                <p class="info">তামিরুল মিল্লাত কামিল মাদ্রাসা বাংলাদেশের একটি ধর্মীয় উচ্চ শিক্ষা প্রতিষ্ঠান। তামিরুল মিল্লাত ট্রাস্ট পরিচালিত মাদ্রাসাটি দেশের সব মাদ্রাসার মধ্যে শীর্ষ ফলাফলের স্থান দখলের পাশাপাশি ঢাকা বিশ্ববিদ্যালয়সহ দেশের সব নামকরা বিশ্ববিদ্যালয়ের প্রবেশিকা পরীক্ষায় ভালো ফলাফল করতে দেখা যায়। এই ওয়েবসাইটটি এই প্রতিষ্ঠানের ৯ম শ্রেণীর খ শাখার জন্য। আমরা আশা করি আমাদের সকল সহপাঠীরা এই ওয়েবপেইজটি পছন্দ করবে এবং এটি তাদের জন্য দরকারী হবে।</p>
+                <p style="color: skyblue;">অনুগ্রহ করে এই <a href="https://tmkmclass9b.github.io/tmkmclass9b.com/home.html">https://tmkmclass9b.github.io/tmkmclass9b.com/home.html</a> হোমপেজের লিঙ্কটি সংরক্ষণ করুন বা এটি বুকমার্ক করুন, যাতে আপনি প্রতিবার লগ ইন না করেই আমাদের ওয়েবসাইটটি দেখতে পারেন</p>
+                <a href="class-routine.html" class="cta-button">Check Our Class Routine</a><br>
+                <iframe width="600" height="400" src="https://www.youtube.com/embed/cCNLS5bfNc4" title="How use TMKM Class9B Website" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </main>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 TMKM Class 9(B). All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
